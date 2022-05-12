@@ -4,7 +4,77 @@
     ViewBag.Title = "Details";
 }
 
+<h2>Rental Details</h2>
 
+<div>
+    <h4>Transaction Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TransactionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransactionId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pet.PetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pet.PetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalCost)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.PetAvailability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PetAvailability)
+        </dd>*@
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.TransType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfRental)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfRental)
+        </dd>
+
+    </dl>
+</div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.TransactionId }) |
     @Html.ActionLink("Back to List", "Index")

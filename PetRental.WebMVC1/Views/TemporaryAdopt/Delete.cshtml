@@ -6,5 +6,82 @@
 
 <h2>Delete</h2>
 
+<h4>Delete This Transaction From The Directory?</h4>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TransactionId)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.TransactionId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pet.PetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pet.PetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PetAvailability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PetAvailability)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.TransType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfRental)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfRental)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
 </div>
