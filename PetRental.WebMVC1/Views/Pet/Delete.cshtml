@@ -7,5 +7,83 @@
 <h2>Delete</h2>
 
 <h4>Delete This Pet From The Directory?</h4>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PetName)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.PetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalBreed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalBreed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vaccination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vaccination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PetHistory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PetHistory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PetCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PetCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimatedCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstimatedCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
     }
+</div>
