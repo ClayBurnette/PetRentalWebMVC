@@ -3,10 +3,21 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class initialcreate : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Contents",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Title = c.String(nullable: false, maxLength: 30),
+                        Description = c.String(nullable: false, maxLength: 100),
+                        Image = c.Binary(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
             CreateTable(
                 "dbo.Customers",
                 c => new
@@ -51,8 +62,12 @@
                         PetCount = c.Boolean(nullable: false),
                         EstimatedCost = c.Decimal(nullable: false, precision: 18, scale: 2),
                         PetHistory = c.String(),
+                        ImagePath = c.Binary(),
+                        Content_ID = c.Int(),
                     })
-                .PrimaryKey(t => t.PetId);
+                .PrimaryKey(t => t.PetId)
+                .ForeignKey("dbo.Contents", t => t.Content_ID)
+                .Index(t => t.Content_ID);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -131,6 +146,7 @@
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.TemporaryAdopts", "PetId", "dbo.Pets");
+            DropForeignKey("dbo.Pets", "Content_ID", "dbo.Contents");
             DropForeignKey("dbo.TemporaryAdopts", "CustomerId", "dbo.Customers");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
@@ -138,6 +154,7 @@
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Pets", new[] { "Content_ID" });
             DropIndex("dbo.TemporaryAdopts", new[] { "PetId" });
             DropIndex("dbo.TemporaryAdopts", new[] { "CustomerId" });
             DropTable("dbo.AspNetUserLogins");
@@ -148,6 +165,7 @@
             DropTable("dbo.Pets");
             DropTable("dbo.TemporaryAdopts");
             DropTable("dbo.Customers");
+            DropTable("dbo.Contents");
         }
     }
 }

@@ -75,7 +75,8 @@
             <td>
                 @Html.ActionLink("Edit Pet", "Edit", new { id = item.PetId }) |
                 @Html.ActionLink("More Details", "Details", new { id = item.PetId }) |
-                @Html.ActionLink("Remove Pet", "Delete", new { id = item.PetId })
+                @Html.ActionLink("Remove Pet", "Delete", new { id = item.PetId }) |
+                @Html.ActionLink("Add Pictures Of This Pet", "Index", "Content/Index")
             </td>
         </tr>
     }

@@ -47,6 +47,7 @@ namespace PetRental.WebMVC1.Models
         public decimal EstimatedCost { get; set; }
         [Display(Name = "Pet History")]
         public string PetHistory { get; set; }
+        public virtual Content Content { get; set; }
         public virtual List<TemporaryAdopt> TemporaryAdopts { get; set; } = new List<TemporaryAdopt>();
     }
 }
