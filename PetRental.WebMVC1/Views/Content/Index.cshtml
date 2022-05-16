@@ -1,0 +1,43 @@
+﻿@model IEnumerable<PetRental.WebMVC1.ViewModel.ContentViewModels>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Photo Gallery</h2>
+
+<p>
+    @Html.ActionLink("Add A New Pet Photo!", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<br />
+<table class="table" style="width: 1200px;">
+    <tr>
+        <th>
+            <b>Pet Name</b>
+        </th>
+        <th>
+            <b>Photo Details</b>
+        </th>
+        <th>
+            <b>Photo</b>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        <img src="/Content/RetrieveImage/@item.ID" alt="" height=200 width=200 />
+    </td>
+    <td>
+        @Html.ActionLink("Remove From Gallery", "Delete", new { id = item.ID })
+    </td>
+</tr>
+    }
+</table>

@@ -1,10 +1,13 @@
 ﻿using PetRental.WebMVC1.Models;
+using System.Drawing;
+using System.IO;
 
 namespace PetRental.WebMVC1.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Drawing;
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<PetRental.WebMVC1.Models.ApplicationDbContext>
@@ -16,7 +19,6 @@ namespace PetRental.WebMVC1.Migrations
 
         protected override void Seed(PetRental.WebMVC1.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
             // ``````````Seed Data For Pets`````````` //
             context.Pets.AddOrUpdate(p => p.PetId, new Pet()
             {
@@ -572,8 +574,233 @@ namespace PetRental.WebMVC1.Migrations
                 TransType = (TemporaryAdopt.TransactionType)2,
                 TimeOfRental = DateTime.Now
             });
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+
+            // ``````````Seed Data For Images`````````` //
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 1,
+                Title = "Apollo",
+                Description = "We Had So Much Fun Getting To Know Apollo!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Apollo.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 2,
+                Title = "Cierra",
+                Description = "It Was Awesome Hanging With Cierra!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Cierra.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 3,
+                Title = "Curtis",
+                Description = "Curtis Is One Of The Coolest Dogs Ever!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Curtis.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 4,
+                Title = "Daphne",
+                Description = "Daphne Loves To Play!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Daphne.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 5,
+                Title = "Finn",
+                Description = "I Love Finn, He Is So Energetic!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Finn.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 6,
+                Title = "Floyd",
+                Description = "We Had A Ball Hanging With Floyd!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Floyd.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 7,
+                Title = "Henry",
+                Description = "Henry Always Keeps Me Company!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Henry.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 8,
+                Title = "Kaida",
+                Description = "Kaida Loved Playing Ball!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Kaida.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 9,
+                Title = "Kailey",
+                Description = "Kailey Is A Beautiful Girl!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Kailey.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 10,
+                Title = "Max",
+                Description = "Max Always Holds A Place In Our Hearts!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Max.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 11,
+                Title = "Minnow",
+                Description = "Minnow Has To Be The Coolest Pet!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Minnow.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 12,
+                Title = "Peanut",
+                Description = "Peanut Helped Me Get Through Some Tough Times!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Peanut.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 13,
+                Title = "Pepsi",
+                Description = "Pepsi Knows How To Do A Lot Of Tricks!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Pepsi.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 14,
+                Title = "Rose",
+                Description = "Rose, We Can't Say Enough About Her!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Rose.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 15,
+                Title = "Zaffle",
+                Description = "Zaffle Makes Me So Happy!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Zaffle.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 16,
+                Title = "Andie",
+                Description = "Andie Was So Comfortable To Be Around!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Andie.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 17,
+                Title = "Asher",
+                Description = "Asher Has A Lot Of Energy!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Asher.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 18,
+                Title = "Bert",
+                Description = "Bert Loves To Take Naps With Me!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Bert.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 19,
+                Title = "Booker",
+                Description = "Booker Is Such A Cool Cat!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Booker.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 20,
+                Title = "Cadell",
+                Description = "Cadell Is So Much Fun!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Cadell.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 21,
+                Title = "Claire",
+                Description = "Claire Loves To Play!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Claire.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 22,
+                Title = "Dollface",
+                Description = "Dollface Is Beautiful!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Dollface.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 23,
+                Title = "Frank",
+                Description = "Frank Is So Funny!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Frank.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 24,
+                Title = "Itchy",
+                Description = "Itchy Loves Being Vocal!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Itchy.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 25,
+                Title = "Kid",
+                Description = "Kid Is So Cool!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Kid.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 26,
+                Title = "Aggie",
+                Description = "Aggie Loves Hopping Around!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Aggie.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 27,
+                Title = "Dixie",
+                Description = "Dixie Is Super Smart!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Dixie.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 28,
+                Title = "Itzy",
+                Description = "Itzy Loves To Sleep!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Itzy.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 29,
+                Title = "Jasper",
+                Description = "Jasper Eats Like A King!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Jasper.jpg"),
+            });
+            context.Contents.AddOrUpdate(p => p.ID, new Content()
+            {
+                ID = 30,
+                Title = "Pixie",
+                Description = "Pixie Is So Fluffy!",
+                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Pixie.jpg"),
+            });
+        }
+        public byte[] ReadFile(string sPath)
+        {
+            byte[] data = null;
+
+            FileInfo fInfo = new FileInfo(sPath);
+            long numBytes = fInfo.Length;
+
+            FileStream fStream = new FileStream(sPath, FileMode.Open, FileAccess.Read);
+
+            BinaryReader br = new BinaryReader(fStream);
+
+            data = br.ReadBytes((int)numBytes);
+
+            return data;
         }
     }
 }
