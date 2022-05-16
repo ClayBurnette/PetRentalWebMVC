@@ -12,7 +12,6 @@ namespace PetRental.WebMVC1.Controllers
     public class CustomerController : Controller
     {
         private readonly ApplicationDbContext _db = new ApplicationDbContext();
-        // GET: Customer
         public ActionResult Index()
         {
             List<Customer> customerList = _db.Customers.ToList();
@@ -20,13 +19,11 @@ namespace PetRental.WebMVC1.Controllers
             return View(orderedList);
         }
 
-        // GET: Customer
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Customer
         [HttpPost]
         public ActionResult Create(Customer customer)
         {
@@ -39,8 +36,6 @@ namespace PetRental.WebMVC1.Controllers
             return View(customer);
         }
 
-        // GET: Delete
-        // Customer/Delete/{id}
         public ActionResult Delete(int? id)
         {
             if (id == null) return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
@@ -59,8 +54,6 @@ namespace PetRental.WebMVC1.Controllers
             return RedirectToAction("Index");
         }
 
-        // GET: Edit
-        // Customer/Edit/{id}
         public ActionResult Edit(int? id)
         {
             if (id == null) return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
@@ -82,8 +75,6 @@ namespace PetRental.WebMVC1.Controllers
             return View(customer);
         }
 
-        // GET: Details
-        // Customer/Details/{id}
         public ActionResult Details(int? id)
         {
             if (id == null) return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

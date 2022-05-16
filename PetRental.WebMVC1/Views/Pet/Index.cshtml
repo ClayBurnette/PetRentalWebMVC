@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Pets</h2>
+<h2>The Animals Of Pet Fix</h2>
 
 <p>
     @Html.ActionLink("Add A New Pet", "Create")
@@ -12,9 +12,6 @@
 
 <table class="table">
     <tr>
-        @*<th>
-            @Html.DisplayNameFor(model => model.PetId)
-        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.PetName)
         </th>
@@ -30,12 +27,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Vaccination)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.PetHistory)
-        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.PetCount)
-        </th>
+        </th>>
         <th>
             @Html.DisplayNameFor(model => model.EstimatedCost)
         </th>
@@ -44,9 +38,6 @@
     @foreach (var item in Model)
     {
         <tr>
-            @*<td>
-        @Html.DisplayFor(modelItem => item.PetId)
-    </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.PetName)
             </td>
@@ -62,9 +53,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Vaccination)
             </td>
-            @*<td>
-        @Html.DisplayFor(modelItem => item.PetHistory)
-    </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.PetCount)
             </td>

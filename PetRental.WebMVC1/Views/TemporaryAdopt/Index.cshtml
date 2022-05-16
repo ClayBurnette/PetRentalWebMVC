@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Transactions</h2>
+<h2>Recent Pet Fix Transactions</h2>
 
 <tr>
     <td>
@@ -17,9 +17,6 @@
 </tr>
 <table class="table">
     <tr>
-        @*<th>
-                @Html.DisplayNameFor(model => model.TransactionId)
-            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Customer.FullName)
         </th>
@@ -32,24 +29,15 @@
         <th>
             @Html.DisplayNameFor(model => model.RentalCost)
         </th>
-        @*<th>
-                @Html.DisplayNameFor(model => model.PetAvailability)
-            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.TransType)
         </th>
-        @*<th>
-                @Html.DisplayNameFor(model => model.TimeOfRental)
-            </th>*@
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.TransactionId)
-                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Customer.FullName)
             </td>
@@ -62,15 +50,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RentalCost)
             </td>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.PetAvailability)
-                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.TransType)
             </td>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.TimeOfRental)
-                </td>*@
             <td>
                 @Html.ActionLink("Edit Transaction", "Edit", new { id = item.TransactionId }) |
                 @Html.ActionLink("More Details", "Details", new { id = item.TransactionId }) |

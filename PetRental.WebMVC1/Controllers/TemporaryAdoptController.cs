@@ -12,7 +12,7 @@ namespace PetRental.WebMVC1.Controllers
     public class TemporaryAdoptController : Controller
     {
         private readonly ApplicationDbContext _db = new ApplicationDbContext();
-        // GET: TemporaryAdopt
+
         public ActionResult Index()
         {
             return View(_db.TemporaryAdopts.OrderBy(t => t.TimeOfRental).ToList());
