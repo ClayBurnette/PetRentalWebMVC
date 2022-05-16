@@ -65,6 +65,16 @@ namespace PetRental.WebMVC1.Models
     public class RegisterViewModel
     {
         [Required]
+        [MinLength(3, ErrorMessage = "There Is A Min of 3 Characters.")]
+        [MaxLength(30, ErrorMessage = "There Is A Max of 30 Characters")]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+        [Required]
+        [MinLength(3, ErrorMessage = "There Is A Min of 3 Characters.")]
+        [MaxLength(30, ErrorMessage = "There Is A Max of 30 Characters")]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
