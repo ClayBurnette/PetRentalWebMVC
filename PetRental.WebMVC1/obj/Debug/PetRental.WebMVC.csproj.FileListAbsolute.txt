@@ -108,3 +108,4 @@ C:\Users\clayb\OneDrive\Documents\Work\Coding\ElevenFiftyProjects\135SD\Random\P
 C:\Users\clayb\OneDrive\Documents\Work\Coding\ElevenFiftyProjects\135SD\Random\PetRental.WebMVC\PetRental.WebMVC1\obj\Debug\PetRental.WebMVC1.pdb
 C:\Users\clayb\OneDrive\Documents\Work\Coding\ElevenFiftyProjects\135SD\Random\PetRental.WebMVC\PetRental.WebMVC1\obj\Debug\PetRental.WebMVC1.Migrations.initialcreate.resources
 C:\Users\clayb\OneDrive\Documents\Work\Coding\ElevenFiftyProjects\135SD\Random\PetRental.WebMVC\PetRental.WebMVC1\obj\Debug\PetRental.WebMVC.csproj.GenerateResource.cache
+C:\Users\clayb\OneDrive\Documents\Work\Coding\ElevenFiftyProjects\135SD\Random\PetRental.WebMVC\PetRental.WebMVC1\obj\Debug\PetRental.WebMVC1.Migrations.other.resources
