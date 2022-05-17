@@ -3,32 +3,31 @@
 }
 
 <div class="jumbotron">
-    <h1>Pet Fix</h1>
-    <p class="lead">Get Your Pet Fix!<br /> We Strive To Bring Joy To Our Customers And Our Pets, Always.</p>
-    <p>@Html.ActionLink("Meet Our Friends", "Index", "Pet", null, new { @class = "btn btn-primary btn-large" })
+    <h1>Welcome To Pet Fix!</h1>
+    <p class="lead">We Strive To Bring Joy To Our Customers, One Pet At A Time.<br /> Come On, We Have Friends Waiting For you! </p>
+    @*<p>@Html.ActionLink("Meet Our Friends", "Index", "Pet", null, new { @class = "btn btn-primary btn-large" })*@
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Our Pets</h2>
+        <h2>Meet Our Friends</h2>
         <p>
-            We Offer Wonderful Pets That Our Customers Can Rent!<br />
             Relax With A Furry Friend, And Get Your Pet Fix Today! Browse Our Pets, And Get To Know Them.
         </p>
-        @Html.ActionLink("See Our Pets", "Index", "Pet", null, new { @class = "btn btn-primary btn-large" })
+        @Html.ActionLink("Let's Go!", "Index", "Pet", null, new { @class = "btn btn-primary btn-large" })
     </div>
     <div class="col-md-4">
-        <h2>Our Customers</h2>
+        <h2>Be Our Customer</h2>
         <p>
-            We Are So Grateful For The Love And Support Of Our Customers!
+            We Are So Grateful For The Love And Support Of Our Customers! Be Sure to Sign Up As A Pet Fix Member!
         </p>
-        @Html.ActionLink("Customers", "Index", "Customer", null, new { @class = "btn btn-primary btn-large" })
+        @Html.ActionLink("Let's Do It!", "Index", "Customer", null, new { @class = "btn btn-primary btn-large" })
     </div>
     <div class="col-md-4">
-        <h2>Rental History</h2>
+        <h2>See Our Rental History</h2>
         <p>
             We Keep Track Of Every Rental, To Make Sure Our Pets Are Safe, And Our Customers Are Informed.
         </p>
-        @Html.ActionLink("Transactions", "Index", "TemporaryAdopt", null, new { @class = "btn btn-primary btn-large" })
+        @Html.ActionLink("Rental History", "Index", "TemporaryAdopt", null, new { @class = "btn btn-primary btn-large" })
     </div>
 </div>

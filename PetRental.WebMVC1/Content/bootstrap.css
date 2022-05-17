@@ -1395,7 +1395,11 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333333;
-    background-color: #ffffff;
+    background-image: url('Images/Background.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
 
 input,
@@ -2486,6 +2490,10 @@ pre {
 
     .col-md-4 {
         width: 33.33333333%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        margin-right: 300px;
     }
 
     .col-md-3 {
@@ -5996,22 +6004,23 @@ a.badge:focus {
 }
 
 .jumbotron {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #eeeeee;
+    background: none;
 }
 
     .jumbotron h1,
     .jumbotron .h1 {
-        color: inherit;
+        color: white;
     }
 
     .jumbotron p {
         margin-bottom: 15px;
-        font-size: 21px;
+        font-size: 25px;
         font-weight: 200;
+        color: grey;
     }
 
     .jumbotron > hr {
@@ -6038,12 +6047,12 @@ a.badge:focus {
     .container .jumbotron,
     .container-fluid .jumbotron {
         padding-right: 60px;
-        padding-left: 60px;
+        padding-left: 0px;
     }
 
     .jumbotron h1,
     .jumbotron .h1 {
-        font-size: 63px;
+        font-size: 90px;
     }
 }
 
