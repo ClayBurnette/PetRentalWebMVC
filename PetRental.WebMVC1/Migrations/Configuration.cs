@@ -16,7 +16,6 @@ namespace PetRental.WebMVC1.Migrations
         {
             AutomaticMigrationsEnabled = false;
         }
-
         protected override void Seed(PetRental.WebMVC1.Models.ApplicationDbContext context)
         {
             // ``````````Seed Data For Pets`````````` //
