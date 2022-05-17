@@ -1,4 +1,4 @@
-# Pet Fix! Web MVC
+# Pet Fix! A .NET Framework MVC 5 Web Application
 
 ## Mission Statment
 ```
