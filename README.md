@@ -1,6 +1,6 @@
-## Pet Fix! Web MVC
+# Pet Fix! Web MVC
 
-# Mission Statment
+## Mission Statment
 ```
 I am creating a Pet Rental Web MVC.  My thought is that many people would enjoy renting a pet for the day. 
 Some people do not have the ability to foster animals until they are adopted. 
@@ -9,7 +9,7 @@ This would allow animals in Humane Societies to also stretch their legs for an e
 The target audience is animal lovers. I chose this because I think this could actually be an idea that companies could bring to life.  
 I want to write the code for it. 
 ```
-# Pet Fix!
+## Pet Fix!
 ```
 I have created a few data tables to help navigate and arrange the application.  
 I use Pets as the "product" and my customers are able to rent them using our application. 
@@ -20,7 +20,7 @@ I also have created a pet photo gallery.  This can be used by management, as wel
 The idea is to be able to upload photos of the pets being rented, and having a great time with their temporary friends.  
 There is so much more that I would love to do on this project, and I am very pleased how far it has come in such a short amount of time. 
 ```
-# Overview & Requirements
+## Overview & Requirements
 ```
 My assignment was to build a .NET Framework MVC 5 Web Application using n-tier architecture covering a topic of my choice.
 I neeeded to come up with an idea for an application that used a minimum of 3 custom data tables with a minimum of one foreign key relationship.
