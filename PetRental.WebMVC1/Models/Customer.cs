@@ -8,7 +8,9 @@ namespace PetRental.WebMVC1.Models
 {
     public class Customer
     {
-        [Key][Display(Name = "Customer ID")] public int CustomerId { get; set; }
+        [Key]
+        [Display(Name = "Customer ID")] 
+        public int CustomerId { get; set; }
 
         [Required]
         [Display(Name = "First Name")]
