@@ -22,7 +22,7 @@
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <ProjectView>ProjectFiles</ProjectView>
     <WebStackScaffolding_DbContextTypeFullName>PetRental.WebMVC1.Models.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
-    <NameOfLastUsedPublishProfile>C:\Users\clayb\OneDrive\Documents\Work\Coding\ElevenFiftyProjects\135SD\Random\PetRental.WebMVC2\PetRental.WebMVC1\Properties\PublishProfiles\PetRentalWebMVC1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\clayb\OneDrive\Documents\Work\Coding\ElevenFiftyProjects\135SD\Random\PetRental.WebMVC2\PetRental.WebMVC1\Properties\PublishProfiles\PetRentalWebMVCSD135 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
