@@ -1399,7 +1399,6 @@ body {
     object-fit: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
 input,
@@ -8086,7 +8085,6 @@ button.close {
 .navbar-default .badge {
     background-color: #fff;
     color: #e95420;
-    
 }
 
 .navbar-inverse .badge {
