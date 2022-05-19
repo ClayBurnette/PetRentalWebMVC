@@ -3801,7 +3801,7 @@ fieldset[disabled] a.btn {
 .btn-default {
     color: #ffffff;
     background-color: #e95420;
-    border-color: #aea79f;
+    border-color: #e95420;
 }
 
     .btn-default:focus,
