@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentCreate.cs" />
+    <Compile Include="ContentDetail.cs" />
+    <Compile Include="ContentEdit.cs" />
+    <Compile Include="ContentListItem.cs" />
+    <Compile Include="ContentListSettingItem.cs" />
     <Compile Include="CustomerCreate.cs" />
     <Compile Include="CustomerDetail.cs" />
     <Compile Include="CustomerEdit.cs" />

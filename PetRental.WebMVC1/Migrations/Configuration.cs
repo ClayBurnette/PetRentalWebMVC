@@ -580,7 +580,7 @@ namespace PetRental.WebMVC1.Migrations
                 ID = 1,
                 Title = "Apollo",
                 Description = "We Had So Much Fun Getting To Know Apollo!",
-                Image = ReadFile("C:/Users/clayb/OneDrive/Documents/Work/Coding/ElevenFiftyProjects/135SD/Random/PetRental.WebMVC/PetRental.WebMVC1/Content/Images/Apollo.jpg"),
+                Image = ReadFile("../../Images/Apollo.jpg")
             });
             context.Contents.AddOrUpdate(p => p.ID, new Content()
             {

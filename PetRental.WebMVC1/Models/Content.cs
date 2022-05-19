@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace PetRental.WebMVC1.Models
 {
@@ -24,6 +25,7 @@ namespace PetRental.WebMVC1.Models
         [Display(Name = "Photo Details")]
         public string Description { get; set; }
 
+        [AllowHtml]
         [Required]
         [Display(Name ="Photo")]
         public byte[] Image { get; set; }

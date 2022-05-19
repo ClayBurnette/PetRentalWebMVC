@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentService.cs" />
     <Compile Include="CustomerService.cs" />
     <Compile Include="PetService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +69,10 @@
     <ProjectReference Include="..\PetRental.Model\PetRental.Models.csproj">
       <Project>{1D2A00A7-D16C-4E33-BC6C-47B8F9BBBCED}</Project>
       <Name>PetRental.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PetRental.WebMVC1\PetRental.WebMVC.csproj">
+      <Project>{D9EA4ED1-C0FF-464C-9705-6F66FD903ADC}</Project>
+      <Name>PetRental.WebMVC</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
