@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Details";
 }
-
+<br />
+<br />
 <h2>Transaction Details</h2>
 
 <div>
@@ -67,6 +68,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TransactionId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit This Transaction", "Edit", new { id = Model.TransactionId }) |
+    @Html.ActionLink("Back To Directory", "Index")
 </p>

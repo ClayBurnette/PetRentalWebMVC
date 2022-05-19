@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+<br />
+<br />
 <h2>Edit A Pet Rental Transaction</h2>
 
 @using (Html.BeginForm())
@@ -18,7 +19,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.CustomerId, "CustomerId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-xs-3">
                 @Html.DropDownList("CustomerId", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
             </div>
@@ -26,7 +27,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.PetId, "PetId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-xs-3">
                 @Html.DropDownList("PetId", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PetId, "", new { @class = "text-danger" })
             </div>
@@ -34,7 +35,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.RentalDuration, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-xs-3">
                 @Html.EditorFor(model => model.RentalDuration, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.RentalDuration, "", new { @class = "text-danger" })
             </div>
@@ -42,7 +43,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.RentalCost, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-xs-3">
                 @Html.EditorFor(model => model.RentalCost, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.RentalCost, "", new { @class = "text-danger" })
             </div>
@@ -50,7 +51,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.PetAvailability, "Currently Available?", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-xs-3">
                 @Html.EditorFor(model => model.PetAvailability, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
                 @Html.ValidationMessageFor(model => model.PetAvailability, "", new { @class = "text-danger" })
             </div>
@@ -58,7 +59,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.TransType, "Transaction Type", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-xs-3">
                 @Html.EnumDropDownListFor(model => model.TransType, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
                 @Html.ValidationMessageFor(model => model.TransType, "", new { @class = "text-danger" })
             </div>
@@ -66,14 +67,14 @@
 
         <div class="form-group">
             @Html.HiddenFor(model => model.TimeOfRental, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-xs-3">
                 @Html.HiddenFor(model => model.TimeOfRental, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
                 @Html.ValidationMessageFor(model => model.TimeOfRental, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <div class="col-md-offset-2 col-xs-3">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
@@ -81,5 +82,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back To Directory", "Index")
 </div>

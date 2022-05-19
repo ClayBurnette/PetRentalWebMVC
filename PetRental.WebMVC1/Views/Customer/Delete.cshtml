@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Delete";
 }
-
+<br />
+<br />
 <h2>Delete This Customer From The Directory?</h2>
 
 <h4></h4>
@@ -45,12 +46,17 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="form-actions no-color">
+    <div class="col-md-offset-1 col-xs-3">
+        <input type="submit" value="Delete" class="btn btn-default" /> 
+    </div>
+    <br />
+    <br />
+    @Html.ActionLink("Back To Directory", "Index")
+</div>
     }
 </div>

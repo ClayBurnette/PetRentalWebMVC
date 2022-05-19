@@ -2975,7 +2975,7 @@ th {
 }
 
 .table-hover > tbody > tr:hover {
-    background-color: #f5f5f5;
+    background-color: #772953c5 !important;
 }
 
 .table > thead > tr > td.active,
@@ -2998,7 +2998,7 @@ th {
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-    background-color: #e8e8e8;
+    background-color: #e8e8e4;
 }
 
 .table > thead > tr > td.success,
@@ -3044,7 +3044,7 @@ th {
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-    background-color: #c4e3f3;
+    background-color: #c4e3f4;
 }
 
 .table > thead > tr > td.warning,
@@ -3067,7 +3067,7 @@ th {
 .table-hover > tbody > tr.warning:hover > td,
 .table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
-    background-color: #faf2cc;
+    background-color: #faf2ce;
 }
 
 .table > thead > tr > td.danger,
@@ -3800,7 +3800,7 @@ fieldset[disabled] a.btn {
 
 .btn-default {
     color: #ffffff;
-    background-color: #aea79f;
+    background-color: #e95420;
     border-color: #aea79f;
 }
 
@@ -3813,7 +3813,7 @@ fieldset[disabled] a.btn {
 
     .btn-default:hover {
         color: #ffffff;
-        background-color: #978e83;
+        background-color: #c34113;
         border-color: #92897e;
     }
 

@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<br />
+<br />
 <h2>The Animals Of Pet Fix</h2>
 
 <p>
@@ -10,61 +11,65 @@
 </p>
 
 
-<h5><table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PetName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnimalBreed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Vaccination)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PetCount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EstimatedCost)
-        </th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model)
-    {
+<h4>
+    <table class="table table-hover">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PetName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AnimalBreed)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Vaccination)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PetCount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EstimatedCost)
-            </td>
-            
-            <td>
-                @Html.ActionLink("Edit Pet", "Edit", new { id = item.PetId }) |
-                @Html.ActionLink("More Details", "Details", new { id = item.PetId }) |
-                @Html.ActionLink("Remove Pet", "Delete", new { id = item.PetId }) 
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.PetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalBreed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaccination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PetCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstimatedCost)
+            </th>
+            <th></th>
         </tr>
-    }
-</table></h5>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnimalBreed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vaccination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PetCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstimatedCost)
+                </td>
+
+                <td>
+                    <h5>
+                    @Html.ActionLink("Edit Pet", "Edit", new { id = item.PetId }) 
+                    @Html.ActionLink("More Details", "Details", new { id = item.PetId }) 
+                    @Html.ActionLink("Remove Pet", "Delete", new { id = item.PetId })
+                        </h5>
+                </td>
+            </tr>
+        }
+    </table>
+</h4>
